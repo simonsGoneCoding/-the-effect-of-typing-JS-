@@ -12,4 +12,13 @@ const addLetter = () => {
   if (indexText === txt.length) clearInterval(indexTyping);
 }
 
-const indexTyping = setInterval(addLetter, 50);
+const indexTyping = setInterval(addLetter, time);
+
+//coursor animation
+const animationTime = 400
+const cursorAnimation = () => {
+  const cursor = document.querySelector('span.cursor')
+  cursor.classList.toggle('active');
+}
+
+setInterval(cursorAnimation, animationTime);
